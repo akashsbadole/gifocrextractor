@@ -1,0 +1,163 @@
+2025-04-07 15:54:16,586 - __main__ - INFO - Starting ABC 123 OCR test
+2025-04-07 15:54:16,586 - __main__ - INFO - Extracting frames from: ./attached_assets/school-cone-7818_128.gif
+2025-04-07 15:54:16,586 - root - INFO - Processing image: school-cone-7818_128.gif, Size: 0.01 MB
+2025-04-07 15:54:16,587 - root - INFO - Output directory ./test_frames is writable
+2025-04-07 15:54:16,595 - root - INFO - GIF image details: 2 frames, dimensions: (128, 116), mode: P
+2025-04-07 15:54:16,600 - root - INFO - Converted frame 1 from P to RGB
+2025-04-07 15:54:16,602 - root - INFO - Processed frame 1/2, time: 0.01s, saved to: ./test_frames/frame_0_6278908cc4ed44aeb08eaf7d9bfae97e.jpg
+2025-04-07 15:54:16,603 - root - INFO - Converted frame 2 from RGBA to RGB
+2025-04-07 15:54:16,604 - root - INFO - Processed frame 2/2, time: 0.00s, saved to: ./test_frames/frame_1_8b96b0f6514b484d9bdff2b058b136d7.jpg
+2025-04-07 15:54:16,604 - root - INFO - Successfully extracted 2/2 frames in 0.02s
+2025-04-07 15:54:16,604 - __main__ - INFO - Extracted 2 frames
+2025-04-07 15:54:16,605 - __main__ - INFO - Performing OCR on frames...
+2025-04-07 15:54:16,649 - root - INFO - Tesseract is installed: tesseract 5.3.4
+2025-04-07 15:54:16,704 - root - INFO - Tesseract language packs found: 129
+2025-04-07 15:54:16,704 - root - INFO - English language pack is available
+2025-04-07 15:54:16,705 - root - INFO - Processing frame: ./test_frames/frame_0_6278908cc4ed44aeb08eaf7d9bfae97e.jpg, Size: 11092 bytes
+2025-04-07 15:54:16,705 - root - INFO - Image opened successfully: ./test_frames/frame_0_6278908cc4ed44aeb08eaf7d9bfae97e.jpg, Format: JPEG, Size: (128, 116), Mode: RGB
+2025-04-07 15:54:17,056 - root - INFO - Image detected as chalkboard: True, green pixels: 53/100
+2025-04-07 15:54:17,144 - pytesseract - DEBUG - ['tesseract', '/tmp/tess_10b_rimt_input.PNG', '/tmp/tess_10b_rimt', '--oem', '0', '--psm', '10', '-l', 'eng', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 'txt']
+2025-04-07 15:54:17,373 - root - DEBUG - ABC pattern match: M
+2025-04-07 15:54:17,374 - pytesseract - DEBUG - ['tesseract', '/tmp/tess_e_65m_81_input.PNG', '/tmp/tess_e_65m_81', '--oem', '0', '--psm', '6', '-l', 'eng', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 'txt']
+2025-04-07 15:54:17,584 - root - DEBUG - ABC pattern match: AC
+45
+   3
+2025-04-07 15:54:17,584 - root - INFO - Found ideal ABC pattern: AC
+45
+   3, stopping search
+2025-04-07 15:54:17,591 - pytesseract - DEBUG - ['tesseract', '/tmp/tess_bex51npb_input.PNG', '/tmp/tess_bex51npb', '--oem', '0', '--psm', '10', '-l', 'eng', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 'txt']
+2025-04-07 15:54:17,807 - root - DEBUG - ABC pattern match: Q
+2025-04-07 15:54:17,813 - pytesseract - DEBUG - ['tesseract', '/tmp/tess_i7uktw6q_input.PNG', '/tmp/tess_i7uktw6q', '--oem', '0', '--psm', '6', '-l', 'eng', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 'txt']
+2025-04-07 15:54:18,022 - root - DEBUG - ABC pattern match: FAG
+I 
+ 125
+2025-04-07 15:54:18,022 - root - INFO - Found ideal ABC pattern: FAG
+I 
+ 125, stopping search
+2025-04-07 15:54:18,022 - root - INFO - Best OCR result from 'original + abc_digits', took 0.88s
+2025-04-07 15:54:18,022 - root - INFO - OCR on frame_0_6278908cc4ed44aeb08eaf7d9bfae97e.jpg successful, took 0.88s, extracted: FAG
+I 
+ 125...
+2025-04-07 15:54:18,022 - __main__ - INFO - Frame 1 OCR result: FAG
+I 
+ 125
+2025-04-07 15:54:18,056 - root - INFO - Tesseract is installed: tesseract 5.3.4
+2025-04-07 15:54:18,099 - root - INFO - Tesseract language packs found: 129
+2025-04-07 15:54:18,100 - root - INFO - English language pack is available
+2025-04-07 15:54:18,100 - root - INFO - Processing frame: ./test_frames/frame_1_8b96b0f6514b484d9bdff2b058b136d7.jpg, Size: 10804 bytes
+2025-04-07 15:54:18,100 - root - INFO - Image opened successfully: ./test_frames/frame_1_8b96b0f6514b484d9bdff2b058b136d7.jpg, Format: JPEG, Size: (128, 116), Mode: RGB
+2025-04-07 15:54:18,103 - root - INFO - Image detected as chalkboard: True, green pixels: 65/100
+2025-04-07 15:54:18,160 - pytesseract - DEBUG - ['tesseract', '/tmp/tess_v7w8f_yv_input.PNG', '/tmp/tess_v7w8f_yv', '--oem', '0', '--psm', '10', '-l', 'eng', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 'txt']
+2025-04-07 15:54:18,427 - root - DEBUG - ABC pattern match: K
+2025-04-07 15:54:18,434 - pytesseract - DEBUG - ['tesseract', '/tmp/tess_g3usfqn0_input.PNG', '/tmp/tess_g3usfqn0', '--oem', '0', '--psm', '6', '-l', 'eng', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 'txt']
+2025-04-07 15:54:18,795 - root - DEBUG - ABC pattern match: 7237
+7 7
+2025-04-07 15:54:18,799 - root - INFO - Found ideal ABC pattern: 7237
+7 7, stopping search
+2025-04-07 15:54:18,806 - pytesseract - DEBUG - ['tesseract', '/tmp/tess_o_lk0fkd_input.PNG', '/tmp/tess_o_lk0fkd', '--oem', '0', '--psm', '10', '-l', 'eng', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 'txt']
+2025-04-07 15:54:19,105 - pytesseract - DEBUG - ['tesseract', '/tmp/tess_2ogwqi4c_input.PNG', '/tmp/tess_2ogwqi4c', '--oem', '0', '--psm', '6', '-l', 'eng', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 'txt']
+2025-04-07 15:54:19,325 - root - DEBUG - ABC pattern match: A
+
+F C
+
+34
+72Q
+2025-04-07 15:54:19,327 - root - INFO - Found ideal ABC pattern: A
+
+F C
+
+34
+72Q, stopping search
+2025-04-07 15:54:19,327 - root - INFO - Best OCR result from 'original + abc_digits', took 1.17s
+2025-04-07 15:54:19,327 - root - INFO - OCR on frame_1_8b96b0f6514b484d9bdff2b058b136d7.jpg successful, took 1.17s, extracted: A
+
+F C
+
+34
+72Q...
+2025-04-07 15:54:19,328 - __main__ - INFO - Frame 2 OCR result: A
+
+F C
+
+34
+72Q
+2025-04-07 15:54:19,328 - root - INFO - Starting OCR processing on 2 frames
+2025-04-07 15:54:19,368 - root - INFO - Tesseract is installed: tesseract 5.3.4
+2025-04-07 15:54:19,424 - root - INFO - Tesseract language packs found: 129
+2025-04-07 15:54:19,425 - root - INFO - English language pack is available
+2025-04-07 15:54:19,425 - root - INFO - Processing frame: ./test_frames/frame_0_6278908cc4ed44aeb08eaf7d9bfae97e.jpg, Size: 11092 bytes
+2025-04-07 15:54:19,425 - root - INFO - Image opened successfully: ./test_frames/frame_0_6278908cc4ed44aeb08eaf7d9bfae97e.jpg, Format: JPEG, Size: (128, 116), Mode: RGB
+2025-04-07 15:54:19,430 - root - INFO - Image detected as chalkboard: True, green pixels: 66/100
+2025-04-07 15:54:19,487 - pytesseract - DEBUG - ['tesseract', '/tmp/tess_ipkfne6a_input.PNG', '/tmp/tess_ipkfne6a', '--oem', '0', '--psm', '10', '-l', 'eng', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 'txt']
+2025-04-07 15:54:19,839 - root - DEBUG - ABC pattern match: M
+2025-04-07 15:54:19,844 - pytesseract - DEBUG - ['tesseract', '/tmp/tess_axochveg_input.PNG', '/tmp/tess_axochveg', '--oem', '0', '--psm', '6', '-l', 'eng', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 'txt']
+2025-04-07 15:54:20,163 - root - DEBUG - ABC pattern match: AC
+45
+   3
+2025-04-07 15:54:20,167 - root - INFO - Found ideal ABC pattern: AC
+45
+   3, stopping search
+2025-04-07 15:54:20,178 - pytesseract - DEBUG - ['tesseract', '/tmp/tess_3cebn1d1_input.PNG', '/tmp/tess_3cebn1d1', '--oem', '0', '--psm', '10', '-l', 'eng', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 'txt']
+2025-04-07 15:54:20,561 - root - DEBUG - ABC pattern match: Q
+2025-04-07 15:54:20,572 - pytesseract - DEBUG - ['tesseract', '/tmp/tess_b5xqwpdg_input.PNG', '/tmp/tess_b5xqwpdg', '--oem', '0', '--psm', '6', '-l', 'eng', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 'txt']
+2025-04-07 15:54:20,900 - root - DEBUG - ABC pattern match: FAG
+I 
+ 125
+2025-04-07 15:54:20,901 - root - INFO - Found ideal ABC pattern: FAG
+I 
+ 125, stopping search
+2025-04-07 15:54:20,901 - root - INFO - Best OCR result from 'original + abc_digits', took 1.41s
+2025-04-07 15:54:20,901 - root - INFO - OCR on frame_0_6278908cc4ed44aeb08eaf7d9bfae97e.jpg successful, took 1.41s, extracted: FAG
+I 
+ 125...
+2025-04-07 15:54:20,901 - root - INFO - OCR Progress: Processed 1/2 frames
+2025-04-07 15:54:20,953 - root - INFO - Tesseract is installed: tesseract 5.3.4
+2025-04-07 15:54:21,035 - root - INFO - Tesseract language packs found: 129
+2025-04-07 15:54:21,048 - root - INFO - English language pack is available
+2025-04-07 15:54:21,049 - root - INFO - Processing frame: ./test_frames/frame_1_8b96b0f6514b484d9bdff2b058b136d7.jpg, Size: 10804 bytes
+2025-04-07 15:54:21,049 - root - INFO - Image opened successfully: ./test_frames/frame_1_8b96b0f6514b484d9bdff2b058b136d7.jpg, Format: JPEG, Size: (128, 116), Mode: RGB
+2025-04-07 15:54:21,056 - root - INFO - Image detected as chalkboard: True, green pixels: 64/100
+2025-04-07 15:54:21,115 - pytesseract - DEBUG - ['tesseract', '/tmp/tess_sti_ktjl_input.PNG', '/tmp/tess_sti_ktjl', '--oem', '0', '--psm', '10', '-l', 'eng', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 'txt']
+2025-04-07 15:54:21,383 - root - DEBUG - ABC pattern match: K
+2025-04-07 15:54:21,385 - pytesseract - DEBUG - ['tesseract', '/tmp/tess_xanr82ir_input.PNG', '/tmp/tess_xanr82ir', '--oem', '0', '--psm', '6', '-l', 'eng', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 'txt']
+2025-04-07 15:54:21,645 - root - DEBUG - ABC pattern match: 7237
+7 7
+2025-04-07 15:54:21,648 - root - INFO - Found ideal ABC pattern: 7237
+7 7, stopping search
+2025-04-07 15:54:21,656 - pytesseract - DEBUG - ['tesseract', '/tmp/tess_5zc29194_input.PNG', '/tmp/tess_5zc29194', '--oem', '0', '--psm', '10', '-l', 'eng', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 'txt']
+2025-04-07 15:54:21,944 - pytesseract - DEBUG - ['tesseract', '/tmp/tess_k9vze_l3_input.PNG', '/tmp/tess_k9vze_l3', '--oem', '0', '--psm', '6', '-l', 'eng', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 'txt']
+2025-04-07 15:54:22,262 - root - DEBUG - ABC pattern match: A
+
+F C
+
+34
+72Q
+2025-04-07 15:54:22,262 - root - INFO - Found ideal ABC pattern: A
+
+F C
+
+34
+72Q, stopping search
+2025-04-07 15:54:22,262 - root - INFO - Best OCR result from 'original + abc_digits', took 1.15s
+2025-04-07 15:54:22,262 - root - INFO - OCR on frame_1_8b96b0f6514b484d9bdff2b058b136d7.jpg successful, took 1.15s, extracted: A
+
+F C
+
+34
+72Q...
+2025-04-07 15:54:22,262 - root - INFO - OCR Progress: Processed 2/2 frames
+2025-04-07 15:54:22,262 - root - INFO - OCR completed on 2 frames. Success: 2, Errors: 0, Timeouts: 0
+2025-04-07 15:54:22,263 - __main__ - INFO - Batch OCR results:
+2025-04-07 15:54:22,263 - __main__ - INFO - Frame 1: FAG
+I 
+ 125
+2025-04-07 15:54:22,263 - __main__ - INFO - Frame 2: A
+
+F C
+
+34
+72Q
+2025-04-07 15:54:22,263 - __main__ - INFO - SUCCESS! Found ABC/123 pattern in frame 1: FAG
+I 
+ 125
+2025-04-07 15:54:22,263 - __main__ - INFO - Test PASSED

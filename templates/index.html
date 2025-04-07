@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+
+{% block title %}Image OCR Extractor - Extract Text from Images{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title"><i class="fas fa-file-image me-2"></i>Image OCR Extractor</h1>
+                <p class="card-text">Upload an image file (GIF, JPEG, PNG, AVIF) to extract text using OCR. The application will process the image frames, analyze them for text, and provide the results in Excel or CSV format.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-upload me-2"></i>Upload Image</h5>
+            </div>
+            <div class="card-body">
+                <form id="upload-form">
+                    <div class="text-center p-5 border rounded mb-3 upload-zone">
+                        <i class="fas fa-file-upload fa-3x mb-3"></i>
+                        <h5>Drag & Drop your image here</h5>
+                        <p>or</p>
+                        <label for="file-upload" class="btn btn-primary">
+                            <i class="fas fa-folder-open me-2"></i>Browse Files
+                        </label>
+                        <input type="file" id="file-upload" name="file" accept=".gif,.jpg,.jpeg,.png,.avif" style="display: none;">
+                        <p class="text-muted mt-2">Maximum file size: 16MB</p>
+                    </div>
+                    
+                    <div id="upload-alert"></div>
+                    
+                    <button type="submit" id="upload-btn" class="btn btn-success">
+                        <i class="fas fa-upload me-2"></i>Upload and Process
+                    </button>
+                </form>
+                
+                <div id="processing-container" style="display: none;">
+                    <div class="alert alert-info">
+                        <i class="fas fa-spinner fa-spin me-2"></i>Processing your image...
+                    </div>
+                    
+                    <div id="progress-container">
+                        <div class="progress mb-3">
+                            <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Processing Steps -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-tasks me-2"></i>Processing Steps</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <i class="fas fa-file-image me-2"></i>
+                            <span>1. Upload Image File</span>
+                        </div>
+                        <span id="step1-status" class="badge bg-secondary">Waiting</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <i class="fas fa-crop-alt me-2"></i>
+                            <span>2. Extract Frames</span>
+                        </div>
+                        <span id="step2-status" class="badge bg-secondary">Waiting</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <i class="fas fa-text-width me-2"></i>
+                            <span>3. Perform OCR</span>
+                        </div>
+                        <span id="step3-status" class="badge bg-secondary">Waiting</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <i class="fas fa-file-export me-2"></i>
+                            <span>4. Export Results</span>
+                        </div>
+                        <span id="step4-status" class="badge bg-secondary">Waiting</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Frame Preview -->
+<div id="frames-preview-container" style="display: none;">
+    <div class="col-lg-12">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-film me-2"></i>Frame Preview</h5>
+            </div>
+            <div class="card-body">
+                <div id="frames-preview" class="row">
+                    <!-- Frames will be added here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- OCR Results -->
+<div id="results-container" style="display: none;">
+    <div class="col-lg-12">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-text-width me-2"></i>OCR Results</h5>
+            </div>
+            <div class="card-body">
+                <div id="ocr-results-container">
+                    <!-- OCR results will be added here dynamically -->
+                </div>
+                <div class="mt-4">
+                    <div class="form-group mb-3">
+                        <label for="export-format">Export Format:</label>
+                        <select id="export-format" class="form-select">
+                            <option value="excel">Excel (.xlsx)</option>
+                            <option value="csv">CSV (.csv)</option>
+                        </select>
+                    </div>
+                    <button id="export-btn" class="btn btn-success" style="display: none;">
+                        <i class="fas fa-download me-2"></i>Download Results
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Diagnostics Results -->
+<div id="diagnostics-container" style="display: none;"></div>
+
+<!-- Tools & Utilities -->
+<div class="row mt-4">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-tools me-2"></i>Tools & Utilities</h5>
+            </div>
+            <div class="card-body">
+                <button id="cleanup-btn" class="btn btn-warning">
+                    <i class="fas fa-broom me-2"></i>Cleanup Temporary Files
+                </button>
+                <button id="diagnostics-btn" class="btn btn-info ms-2">
+                    <i class="fas fa-stethoscope me-2"></i>Run System Diagnostics
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}
