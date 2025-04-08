@@ -3,7 +3,7 @@ name = "repl-nix-workspace"
 version = "0.1.0"
 description = "Add your description here"
 authors = ["Your Name <you@example.com>"]
-packages = [{ include = "repl_nix_workspace" }] # Update with your package/folder name
+#packages = [{ include = "repl_nix_workspace" }] # Update with your package/folder name
 
 [tool.poetry.dependencies]
 python = "^3.11"
